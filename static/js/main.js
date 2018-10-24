@@ -110,7 +110,7 @@ $(window).on('scroll', function(){
        $('.bg-fix').css({"position": "fixed"});
     }else{
         $('.futuer-3').removeClass('in-view');
-        
+        $('.bg-fix').css({"position": "relative"});
     }
     
     
@@ -283,5 +283,7 @@ $(window).on('scroll', function(){
             setTimeout(function() {
                 $(".futuer-4").addClass("is-show");
             },1000);
+        }else{
+            $(".futuer-4").css({"opacity":"0"});
         }
   });
