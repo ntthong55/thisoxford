@@ -1,0 +1,727 @@
+@font-face {
+  font-family: 'DINOT-Bold';
+  src: url(fonts/DINOT-Bold.otf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DINOT-Medium';
+  src: url(fonts/DINOT-Medium.otf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaStd-CondExtraBoldObl';
+  src: url(fonts/FuturaStd-CondExtraBoldObl.otf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DINOT';
+  src: url(fonts/DINOT.otf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeue-LightCond';
+  src: url(fonts/HelveticaNeue-LightCond.otf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AvenirNext-Regular';
+  src: url(fonts/AvenirNext-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AvenirNext-UltraLight';
+  src: url(fonts/AvenirNext-UltraLight.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DancingScript-Bold';
+  src: url(fonts/DancingScript-Bold.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+a:hover {
+  text-decoration: none;
+}
+html,
+body {
+  font-size: 16px;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ul {
+  padding-left: 0px;
+  margin: 0px;
+}
+.menufix {
+  position: fixed;
+  right: 0px;
+  top: 50%;
+  z-index: 45;
+  padding-right: 30px;
+}
+.menufix .right-menu {
+  list-style: none;
+  text-align: right;
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translate3d(0, -15px, 0);
+}
+.menufix .right-menu li a {
+  display: inline-block;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: padding-right 0.2s ease, color 0.4s ease;
+  color: white;
+  font-size: 0.75em;
+}
+.menufix .right-menu li a:after {
+  content: '';
+  position: absolute;
+  right: -60px;
+  width: 30px;
+  height: 1px;
+  background: white;
+  transition: all 0.4s ease;
+  top: 50%;
+  margin-top: -0.5px;
+}
+.menufix .right-menu li a:hover {
+  padding-right: 30px;
+}
+.menufix .right-menu li a:hover:after {
+  right: -30px;
+}
+.burger {
+  display: block;
+  width: 23px;
+  position: fixed;
+  padding: 19px 16px;
+  z-index: 100;
+  transform: translate3d(0px, 0px, 0px);
+}
+.burger span {
+  width: 23px;
+  height: 1px;
+  display: block;
+  background: #565656;
+  margin-bottom: 7px;
+  transition: all .4s ease;
+}
+.burger.close span:first-child {
+  transform: rotate(-45deg);
+}
+.burger.close span:nth-child(2) {
+  opacity: 0;
+}
+.burger.close span {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 29px;
+  background: rgba(255, 255, 255, 0.7);
+  display: block;
+}
+.burger.close:hover span {
+  background: white;
+}
+.wrap-hea {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in;
+  overflow-y: scroll;
+  z-index: -1;
+}
+.wrap-hea nav,
+.wrap-hea footer {
+  opacity: 0;
+  transition: all 0.7s ease-in;
+  transform: translateY(80px);
+  transition-delay: 0.5s;
+}
+.wrap-hea.open {
+  opacity: 1;
+  z-index: 50;
+}
+.wrap-hea.open nav,
+.wrap-hea.open footer {
+  transform: translateY(0);
+  opacity: 1;
+}
+header {
+  background-color: #1c1c1c;
+  padding: 170px 125px;
+}
+header nav .menu > li {
+  display: block;
+}
+header nav .menu > li > a {
+  font-family: "DINOT";
+  font-size: 2.5em;
+  color: white;
+  text-transform: capitalize;
+  transition: all 0.4s ease-in;
+}
+header nav .menu > li > a:hover {
+  color: #565656;
+  padding-left: 20px;
+}
+header nav .menu > li > ul {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+header nav .menu > li > ul > li {
+  padding: 5px 0px;
+  display: block;
+}
+header nav .menu > li > ul > li a {
+  font-size: 1em;
+  color: #565656;
+  text-transform: capitalize;
+  display: inline-block;
+  transition: color 0.4s ease;
+}
+header nav .menu > li > ul > li a:before {
+  content: '';
+  width: 42px;
+  height: 1px;
+  background: #565656;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  transition: all 0.4s ease-in;
+}
+header nav .menu > li > ul > li a:hover {
+  color: white;
+}
+header nav .menu > li > ul > li a:hover:before {
+  width: 55px;
+  background: white;
+}
+footer {
+  background: white;
+  padding: 50px 125px;
+}
+footer .title {
+  font-size: 1.625em;
+  color: #1b1b1b;
+  text-transform: capitalize;
+  font-family: "HelveticaNeue-LightCond";
+  padding-bottom: 5px;
+}
+footer .addresss,
+footer .contact,
+footer .legals {
+  font-size: 1em;
+  color: #757575;
+  text-transform: capitalize;
+  font-family: "DINOT";
+  padding: 5px 0;
+}
+footer .contact a,
+footer .legals a {
+  color: #757575;
+  transition: color 0.4s ease;
+}
+footer .contact a:hover,
+footer .legals a:hover {
+  color: black;
+}
+footer .share .title-share {
+  font-size: 1.4375em;
+  color: #a7a7a7;
+  font-family: "DINOT";
+  text-transform: capitalize;
+  padding: 10px 0;
+}
+footer .share .icon-share {
+  padding: 5px 0;
+}
+footer .share .icon-share img {
+  width: 20px;
+  margin-right: 10px;
+}
+footer .share .icon-share a {
+  color: #151515;
+  font-size: 1em;
+  text-transform: capitalize;
+  font-family: "DINOT";
+}
+footer .share .icon-share a i {
+  transition: margin-left 0.2s ease;
+  padding-left: 5px;
+}
+footer .share .icon-share a i:before {
+  content: '';
+  display: inline-block;
+  background: url(/static/images/arrow.png) no-repeat;
+  width: 33px;
+  height: 9px;
+}
+footer .share .icon-share a:hover i {
+  margin-left: 10px;
+}
+.cookie {
+  transition: opacity .4s ease;
+}
+.cookie .container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  width: 100%;
+  height: 261px;
+  z-index: 500;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+.cookie .container div h2 {
+  font-size: 2.5em;
+  text-transform: capitalize;
+  font-family: "HelveticaNeue-LightCond";
+  color: white;
+}
+.cookie .container div p,
+.cookie .container div a {
+  font-size: 0.9em;
+  color: white;
+}
+.cookie .container div a {
+  text-decoration: underline;
+}
+.cookie .container ul {
+  margin-left: 50px;
+  text-align: right;
+  width: 340px;
+}
+.cookie .container ul li {
+  display: inline-block;
+}
+.cookie .container ul li a {
+  font-family: "AvenirNext-Regular";
+  font-size: 1em;
+  color: white;
+  padding: 20px 50px;
+}
+.cookie .container ul li .accept {
+  background: #565656;
+}
+.main-page,
+.container,
+#fullpage {
+  height: 100%;
+}
+.timeline .time {
+  position: fixed;
+  left: 50%;
+  width: 64px;
+  margin-left: -32px;
+  color: white;
+  text-align: center;
+  transform: translate3d(0, -72px, 0);
+  transition: all .6s ease;
+  font-size: 1.6875em;
+  font-family: "DancingScript-Bold";
+}
+.timeline .time:before {
+  content: '';
+  height: 33px;
+  width: 1px;
+  display: block;
+  background: white;
+  margin: auto;
+}
+.bg {
+  position: fixed;
+  backface-visibility: visible;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 120%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.bg .overlay {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s ease;
+  background: #1b1b1b;
+}
+.bg.darken .overlay {
+  display: block;
+  opacity: 0.6;
+}
+.bg.light .overlay {
+  display: block;
+  opacity: 1;
+}
+.scene-home .arrow-down,
+.wrap-future .arrow-down {
+  position: fixed;
+  bottom: 0px;
+  padding-bottom: 115px;
+  left: 50%;
+  width: 300px;
+  text-align: center;
+  margin-left: -150px;
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translate3d(0, -15px, 0);
+  font-size: 0.8em;
+}
+.scene-home .arrow-down i,
+.wrap-future .arrow-down i {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+}
+.scene-home .arrow-down i:before,
+.wrap-future .arrow-down i:before {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 33px;
+  transition: all 0.4s ease;
+  left: 50%;
+  margin-left: -4.5px;
+  top: -10px;
+  z-index: 2;
+}
+.scene-home .arrow-down i:after,
+.wrap-future .arrow-down i:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+.scene-home .arrow-down:hover i:before,
+.wrap-future .arrow-down:hover i:before {
+  transform: translateY(30px);
+}
+.scene-home .arrow-down:hover i:after,
+.wrap-future .arrow-down:hover i:after {
+  transform: scale(0.8);
+}
+.scene-home {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+.scene-home .content {
+  padding: 0 60px;
+  color: white;
+  opacity: 0;
+  animation: in-content 2s forwards;
+  -webkit-animation: in-content 2s forwards;
+}
+.scene-home h1 {
+  font-size: 3.563em;
+  text-transform: capitalize;
+  font-family: "DINOT-Medium";
+}
+.scene-home h1 .text1 {
+  transition: all .6s ease;
+  transform-origin: 50% 0%;
+  transition-delay: .2s;
+}
+.scene-home h1 .replace {
+  transition: all .6s ease;
+  transform-origin: 50% 0%;
+  transform: translate3d(0, 0px, 0px) rotate3d(1, 0, 0, 90deg);
+  position: absolute;
+  top: 0;
+  transition-delay: .2s;
+}
+.scene-home h1.active .text1 {
+  transform: translate3d(0, 80px, 0) rotate3d(1, 0, 0, -90deg);
+  opacity: 0;
+}
+.scene-home h1.active .replace {
+  transform: rotate3d(1, 0, 0, 0deg);
+  opacity: 1;
+}
+.scene-home .arrow-down {
+  color: white;
+}
+.scene-home .arrow-down i:before {
+  background: url(/static/images/arrow-down.png) no-repeat;
+}
+.scene-home .arrow-down i:after {
+  background: rgba(0, 0, 0, 0.8);
+}
+.scene-home .arrow-down:hover i:before {
+  transform: translateY(30px);
+}
+.scene-home .arrow-down:hover i:after {
+  transform: scale(0.8);
+}
+.scene-about,
+.scene-futuer {
+  padding-bottom: 490px;
+}
+.scene-about.about-3,
+.scene-futuer.about-3 {
+  padding-bottom: 100px;
+}
+.scene-about h2,
+.scene-futuer h2 {
+  font-size: 2.5em;
+  transform: translate3d(0, 70px, 0);
+  transition: all 0.7s ease;
+  opacity: 0;
+  transition-delay: .2s;
+  color: white;
+  width: 80%;
+  padding: 0 60px;
+  font-family: "AvenirNext-Regular";
+}
+.scene-about.in-view h2,
+.scene-futuer.in-view h2 {
+  opacity: 1;
+  transform: translate3d(0, 0px, 0);
+}
+#past-gifts {
+  padding-bottom: 68vh;
+}
+.scene-past-gifts {
+  color: white;
+  padding: 0 60px 85vh 60px;
+}
+.scene-past-gifts .fadein {
+  transition: all .8s ease;
+  opacity: 0;
+}
+.scene-past-gifts h2,
+.scene-past-gifts h3 {
+  font-size: 4.5em;
+  transform: translateY(160px);
+  font-family: "HelveticaNeue-LightCond";
+  padding-top: 10px;
+  transition-delay: .2s;
+}
+.scene-past-gifts h3 {
+  font-size: 2.5em;
+  width: 80%;
+}
+.scene-past-gifts h4 {
+  transition-delay: .2s;
+  font-family: "AvenirNext-Regular";
+  transform: translateY(80px);
+  font-size: 1.25em;
+  opacity: 0;
+}
+.scene-past-gifts h4 strong {
+  color: white;
+  font-family: "DancingScript-Bold";
+}
+.scene-past-gifts .medium-text {
+  font-size: 1.8em;
+  padding: 30px 0px;
+  transform: translateY(200px);
+  font-family: "DINOT";
+  transition-delay: .2s;
+}
+.scene-past-gifts .small-text {
+  transition-delay: .3s;
+  font-size: 1.1em;
+  transform: translateY(250px);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "DINOT";
+}
+.scene-past-gifts .small-text p {
+  padding: 10px;
+}
+.scene-past-gifts .big-text {
+  font-family: "DancingScript-Bold";
+  font-size: 2.5em;
+  line-height: 45px;
+  transition-delay: .4s;
+  transform: translateY(400px);
+}
+.scene-past-gifts .arthor {
+  font-family: "AvenirNext-Regular";
+  text-transform: capitalize;
+  padding-left: 10px;
+  transition-delay: .5s;
+}
+.scene-past-gifts .big-text,
+.scene-past-gifts .arthor {
+  border: none;
+  transform: translateY(250px);
+  margin: 0px;
+}
+.scene-past-gifts .col-xs-4 {
+  transform: translateY(250px);
+  transition-delay: .4s;
+}
+.scene-past-gifts .wrap {
+  color: white;
+  font-size: 0.9em;
+  position: relative;
+}
+.scene-past-gifts .wrap:before {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background: white;
+  display: inline-block;
+  transition: all .4s ease;
+}
+.scene-past-gifts .wrap i {
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+  width: 33px;
+  height: 26px;
+  margin-left: -20px;
+}
+.scene-past-gifts .wrap i:before {
+  content: '';
+  background: url(/static/images/arrow-down.png) no-repeat;
+  background-size: contain;
+  /*                transform: rotateZ(-135deg);*/
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  transition: all 0.4s ease;
+  bottom: -10px;
+  z-index: 2;
+  transform: rotateZ(-135deg);
+}
+.scene-past-gifts .wrap i:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.1s ease;
+  background: black;
+}
+.scene-past-gifts .wrap:hover:before {
+  background: black;
+  height: 3px;
+  transform: translate3d(0, -5px, 0);
+}
+.scene-past-gifts .wrap:hover i:before {
+  transform: translate3d(0, -12px, 0) rotateZ(-135deg);
+  left: 20px;
+}
+.scene-past-gifts .wrap:hover i:after {
+  transform: scale(0.8);
+}
+.wrap-future {
+  position: relative;
+  height: auto;
+  padding-top: 50vh;
+}
+.wrap-future .scroll-white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: content-box;
+  background: white;
+  z-index: -1;
+}
+.wrap-future .scroll-white .bg-fix {
+  margin: auto;
+  top: 0px;
+  left: 0px;
+  bottom: auto;
+  right: auto;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+.wrap-future .arrow-down {
+  color: black;
+}
+.wrap-future .arrow-down i:before {
+  background: url(/static/images/arrow-black.png) no-repeat;
+}
+.wrap-future .arrow-down i:after {
+  background: rgba(237, 237, 237, 0.8);
+}
+.wrap-future .arrow-down:hover i:before {
+  transform: translateY(30px);
+}
+.wrap-future .arrow-down:hover i:after {
+  transform: scale(0.8);
+}
+.scene-futuer h2 {
+  color: black;
+}
+.futuer-4 {
+  opacity: 0;
+}
+.is-show .time {
+  transform: translate3d(0, 0, 0);
+}
+.is-show .fadein {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+.is-show .right-menu,
+.is-show .arrow-down {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.bg {
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  transition: all 1s ease;
+}
+.bg-scroll {
+  transition: all 2s ease;
+}
+@keyframes in-content {
+  from {
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

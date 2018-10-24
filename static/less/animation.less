@@ -1,0 +1,21 @@
+.bg{
+    opacity: 0;
+    transform: translate3d(0,0,0);
+    transition: all 1s ease;
+}
+.bg-scroll{
+    transition: all 2s ease;
+}
+
+
+@keyframes in-content{
+    from{
+        transform: translate3d(0,-30px,0);
+    }
+    to{
+        opacity:1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+
